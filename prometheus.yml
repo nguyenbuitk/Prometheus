@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s # How frequently to scrape targets
+
+scrape_configs:
+  - job_name: 'example_service'
+    static_configs:
+      - targets: ['localhost:9090'] # Replace with your target's address
+
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['poc-lead.ovng.dev.myovcloud.com:9101'] # Node Exporter address (replace as needed)
+  - job_name: 'python_exporter'
+    static_configs:
+      - targets: ['poc-lead.ovng.dev.myovcloud.com:8001'] 
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['alertmanager:9093'] # Alertmanager address
