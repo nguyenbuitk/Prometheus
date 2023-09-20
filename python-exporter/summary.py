@@ -13,7 +13,7 @@ class HandleRequests(http.server.BaseHTTPRequestHandler):
     @REQUEST_RESPOND_TIME.time()
     def do_GET(self):
         # start_time = time.time()
-        time.sleep(5)
+        time.sleep(6)
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()

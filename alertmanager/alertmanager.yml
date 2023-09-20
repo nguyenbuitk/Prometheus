@@ -1,0 +1,12 @@
+route:
+  receiver: admin
+
+receivers:
+- name: admin
+  email_configs:
+  - to: 'buinguyen2311tk@gmail.com'
+    from: 'buinguyen23112k@gmail.com'
+    smarthost: smtp.gmail.com:587
+    auth_username: 'buinguyen23112k@gmail.com'
+    auth_identity: 'buinguyen23112k@gmail.com'
+    auth_password: 'aekgbvcpdmhadqru'

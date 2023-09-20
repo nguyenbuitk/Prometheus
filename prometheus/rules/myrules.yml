@@ -1,0 +1,27 @@
+groups:
+  - name: my-rules
+    rules:
+      - record: job:node_cpu_seconds:avg_idle
+        expr: avg without(cpu)(rate(node_cpu_seconds_total{mode="idle"}[5m]))
+      
+      # make alert when node_exporter down
+      - alert: NodeExporterDown
+        expr: up{job="node_exporter"} == 0
+
+        # mệnh đề này đảm bảo trước khi gửi alert, prometheus sẽ chờ ít nhất 1 phút với điều kiện node_expoter vẫn down
+        for: 1m
+      
+      - record: job:app_response_latency_seconds:rate1m
+        expr: rate(app_response_latency_seconds_sum[1m]) / rate(app_response_latency_seconds_count[1m])
+
+      - alert: AppLetencyAbove5Sec
+        expr: job:app_response_latency_seconds:rate1m >= 5
+        for: 2m
+        labels:
+          severity: critical
+
+      - alert: AppLatencyAbove2Sec
+        expr: 2 < job:app_response_latency_seconds:rate1m < 5
+        for: 2m
+        labels:
+          severity: warning

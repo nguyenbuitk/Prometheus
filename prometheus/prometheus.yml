@@ -1,5 +1,6 @@
 global:
   scrape_interval: 15s # How frequently to scrape targets
+  evaluation_interval: 15s
 
 scrape_configs:
   - job_name: 'example_service'
@@ -12,6 +13,15 @@ scrape_configs:
   - job_name: 'python_exporter'
     static_configs:
       - targets: ['poc-lead.ovng.dev.myovcloud.com:8001'] 
+  - job_name: 'openvpn-metrics'
+    static_configs:
+      - targets: ['vpn.sqa-eu.ovng.myovcloud.com:9177'] 
+  - job_name: 'haproxy'
+    static_configs:
+      - targets: ['poc-lb.ovng.dev.myovcloud.com:9101'] 
+
+rule_files:
+  - "rules/myrules.yml"
 
 alerting:
   alertmanagers:
