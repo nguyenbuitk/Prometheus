@@ -1,0 +1,10 @@
+- targets:
+  - poc-lead.ovng.dev.myovcloud.com:9100
+  labels:
+    team: "development"
+    region: "mumbai"
+- targets:
+  - poc-m1.ovng.dev.myovcloud.com:9100
+  labels:
+    team: "monitoring"
+    region: "bangalore"
