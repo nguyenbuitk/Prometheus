@@ -2,9 +2,9 @@ global:
   scrape_interval: 15s # How frequently to scrape targets
   evaluation_interval: 15s
   external_labels:
-    cluster: demo-cluster-1
-remote_write:
-  - url: http://vpnb.sqa-eu.ovng.myovcloud.com:32709/api/v1/push
+    cluster: poc-docker
+    #remote_write:
+    #  - url: http://vpnb.sqa-eu.ovng.myovcloud.com:32709/api/v1/push
 
 scrape_configs:
   - job_name: 'example_service'
@@ -54,7 +54,7 @@ scrape_configs:
         # <=> instance of dest = pram.target of source (
       - target_label: __address__
         replacement: poc-lead.ovng.dev.myovcloud.com:9115 
-        # <=> address of dest (origin is prometheus.io) is replace to poc-lead...
+        # <=> address of dest (origin is prometheus.io) is replace to poc-lead ...
         
   - job_name: 'ec2'
     ec2_sd_configs:
