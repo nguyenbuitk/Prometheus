@@ -1,0 +1,17 @@
+{
+	"ulid": "01HCAP37P1YGA7N9VWYS9GPMCR",
+	"minTime": 1696860000037,
+	"maxTime": 1696867200000,
+	"stats": {
+		"numSamples": 751200,
+		"numSeries": 1565,
+		"numChunks": 6260
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HCAP37P1YGA7N9VWYS9GPMCR"
+		]
+	},
+	"version": 1
+}

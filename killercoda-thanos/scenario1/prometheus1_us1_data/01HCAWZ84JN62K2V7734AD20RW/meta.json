@@ -1,0 +1,17 @@
+{
+	"ulid": "01HCAWZ84JN62K2V7734AD20RW",
+	"minTime": 1696867200436,
+	"maxTime": 1696874400000,
+	"stats": {
+		"numSamples": 751200,
+		"numSeries": 1565,
+		"numChunks": 6260
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HCAWZ84JN62K2V7734AD20RW"
+		]
+	},
+	"version": 1
+}

@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 5s
+  external_labels:
+    cluster: batcomputer
+    replica: 0
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['poc-lead.ovng.dev.myovcloud.com:8081']
+remote_write:
+- url: 'http://poc-lead.ovng.dev.myovcloud.com:10808/api/v1/receive'

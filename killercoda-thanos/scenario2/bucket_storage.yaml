@@ -1,0 +1,8 @@
+type: S3
+config:
+  bucket: "thanos"
+  endpoint: "poc-lead.ovng.dev.myovcloud.com:8000"
+  insecure: true
+  signature_version2: true
+  access_key: "minio"
+  secret_key: "melovethanos"

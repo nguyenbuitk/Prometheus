@@ -1,0 +1,17 @@
+{
+	"ulid": "01HCAF7Y0J28HY19KT1ZXZRK38",
+	"minTime": 1696852801160,
+	"maxTime": 1696860000000,
+	"stats": {
+		"numSamples": 482160,
+		"numSeries": 1028,
+		"numChunks": 4040
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HCAF7Y0J28HY19KT1ZXZRK38"
+		]
+	},
+	"version": 1
+}

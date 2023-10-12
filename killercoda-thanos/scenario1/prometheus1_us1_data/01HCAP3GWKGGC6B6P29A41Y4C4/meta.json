@@ -1,0 +1,17 @@
+{
+	"ulid": "01HCAP3GWKGGC6B6P29A41Y4C4",
+	"minTime": 1696860000436,
+	"maxTime": 1696867200000,
+	"stats": {
+		"numSamples": 751200,
+		"numSeries": 1565,
+		"numChunks": 6260
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HCAP3GWKGGC6B6P29A41Y4C4"
+		]
+	},
+	"version": 1
+}

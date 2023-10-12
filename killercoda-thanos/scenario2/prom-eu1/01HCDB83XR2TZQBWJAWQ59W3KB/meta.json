@@ -1,0 +1,26 @@
+{
+	"ulid": "01HCDB83XR2TZQBWJAWQ59W3KB",
+	"minTime": 1688608815009,
+	"maxTime": 1694397600010,
+	"stats": {
+		"numSamples": 1929600,
+		"numSeries": 5,
+		"numChunks": 16490
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HCDB83XR2TZQBWJAWQ59W3KB"
+		]
+	},
+	"version": 1,
+	"thanos": {
+		"labels": {
+			"cluster": "eu1"
+		},
+		"downsample": {
+			"resolution": 0
+		},
+		"source": "blockgen"
+	}
+}
