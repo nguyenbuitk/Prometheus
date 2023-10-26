@@ -89,6 +89,8 @@ scrape_configs:
 
 rule_files:
   - "rules/myrules.yml"
+  - "rules/linuxrules.yml"
+  - "rules/webrules.yml"
 
 alerting:
   alertmanagers:

@@ -1,0 +1,27 @@
+---
+template_files: {}
+template_file_provenances: {}
+alertmanager_config:
+  route:
+    receiver: grafana-default-email
+    group_by:
+    - grafana_folder
+    - alertname
+    routes:
+    - receiver: grafana-default-email
+      object_matchers:
+      - - channel
+        - "="
+        - email
+  templates:
+  receivers:
+  - name: grafana-default-email
+    grafana_managed_receiver_configs:
+    - uid: ap3sPeGIz
+      name: grafana-default-email
+      type: email
+      disableResolveMessage: false
+      settings:
+        addresses: dtnhi@tma.com.vn; lcnhan@tma.com.vn; pntluong@tma.com.vn
+        singleEmail: false
+      secureFields: {}

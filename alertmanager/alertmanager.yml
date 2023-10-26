@@ -1,12 +1,26 @@
+global:
+  smtp_from: 'buinguyen23112k@gmail.com'
+  smtp_smarthost: smtp.gmail.com:587
+  smtp_auth_username: 'buinguyen23112k@gmail.com'
+  smtp_auth_identity: 'buinguyen23112k@gmail.com'
+  smtp_auth_password: 'aekgbvcpdmhadqru'
+
 route:
   receiver: admin
+  group_wait: 2m
+  group_interval: 10s
+  repeat_interval: 1m
+  routes:
+  # Star Solutions
+  - match_re:
+      app_type: (linux|windows)
+    receiver: ss-admin
 
 receivers:
 - name: admin
   email_configs:
-  - to: 'buinguyen2311tk@gmail.com'
-    from: 'buinguyen23112k@gmail.com'
-    smarthost: smtp.gmail.com:587
-    auth_username: 'buinguyen23112k@gmail.com'
-    auth_identity: 'buinguyen23112k@gmail.com'
-    auth_password: 'aekgbvcpdmhadqru'
+  - to: 'bnnguyen@tma.com.vn'
+
+- name: ss-admin
+  email_configs:
+  - to: 'buinguyen23112k@gmail.com'
